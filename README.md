@@ -1,6 +1,6 @@
-![.NET5](https://github.com/ET12DE1Computacion/simpleTemplateCSharp/workflows/.NET5/badge.svg?branch=dev)
+![.NET5](https://github.com/johan-sxs/BolilleroSaico/workflows/.NET5/badge.svg?branch=dev)
 <!-- cambia el link de abajo al de tu usuario/repositorio y BORRA ESTE COMENTARIO -->
-[![Abrir en Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/ET12DE1Computacion/simpleTemplateCSharp)
+[![Abrir en Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/johan-sxs/BolilleroSaico)
 <h1 align="center">E.T. Nº12 D.E. 1º "Libertador Gral. José de San Martín"</h1>
 <p align="center">
   <img src="https://et12.edu.ar/imgs/et12.png">
@@ -8,24 +8,24 @@
 
 ## Computación 2021
 
-**Asignatura**: <!-- REEMPLAZA este comentario por el nombre de la asignatura -->
+**Asignatura**: Programacion Sobre Redes
 
-**Nombre TP**: <!-- REEMPLAZA este comentario por el nombre del TP -->
+**Nombre TP**: Simulación de Bolillero
 
-**Apellido y nombre Alumno**: <!-- REEMPLAZA este comentario por tu apellido y nombre -->
+**Apellido y nombre Alumno**: Saico Ospina Johan
 
-**Curso**: <!-- REEMPLAZA este comentario por tu curso -->
+**Curso**: 6to 7ma
 
 # Título del Proyecto
 
-_Acá va un párrafo que describa lo que es el proyecto._
+_Un programa para simular el funcionamiento de un bolillero, correspondiente a la primera entrega._
 
 ## Comenzando 🚀
 
 Clonar el repositorio github, desde Github Desktop o ejecutar en la terminal o CMD:
-<!-- cambia el link de abajo al de tu repositorio y BORRA ESTE COMENTARIO -->
+
 ```
-git clone https://github.com/ET12DE1Computacion/simpleTemplateCSharp
+git clone https://github.com/johan-sxs/BolilleroSaico
 ```
 
 ### Pre-requisitos 📋
@@ -44,14 +44,11 @@ _Menciona las herramientas y versiones que utilizaste para crear tu proyecto_
 
 ## Versionado 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tuUser/tuRepo/tags).
+Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/johan-sxs/BolilleroSaico/tags).
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Max Power** - *Desarrollo* - [Maxpower](https://github.com/maxpower)
-* **Cosme Fulanito** - *Documentación* - [Cosmefulanito](#Cosmefulanito)
+* **Saico Ospina Johan** - *Desarrollo* - [@johan-sxs](https://github.com/johan-sxs)
 
 ## Licencia 📄
 
