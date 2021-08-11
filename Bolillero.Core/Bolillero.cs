@@ -1,27 +1,30 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
+
+
 
 namespace Bolillero.Core
 {
     public class Bolillero
     {
-     public void bolillas()
-     {
+byte Cantidad {get;set;}
 
-     }
+byte Bolillalazar {get;set;}
 
-       
-      public void Sacarunabolilla()
-     {
+List<byte> Afuera {get;set;}
 
-     }
-     public void IngresarBolillas()
-     {
-
-     }
-     public void Jugarnveces()
-     {
-
-     }
-    }
+List<byte> Dentro{get;set;}
+Random N;
+ 
+ public Bolillero()
+ {
+     List<byte> Afuera = new List<byte>();
+     List<byte> Dentro = new List<byte>();
+     Random N = new Random();
+ }
+ public Bolillero(byte Cantidad)
+ {
+  this.(this.Cantidad);
+    } 
+}
 }
