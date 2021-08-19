@@ -24,7 +24,7 @@ Random N;
  }
  public Bolillero(byte Cantidad)
  {
-  this.(this.Cantidad);
+   this.(this.Cantidad);
     } 
 }
 }
