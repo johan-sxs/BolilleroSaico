@@ -9,11 +9,12 @@ namespace Bolillero.Core
     {
 byte Cantidad {get;set;}
 
-byte Azar {get;set;}
+byte BolilleroAzar {get;set;}
 
 List<byte> Afuera {get;set;}
 
 List<byte> Dentro{get;set;}
+
 Random r;
  
  public Bolillero()
@@ -22,11 +23,7 @@ Random r;
      List<byte> Dentro = new List<byte>();
      Random r = new Random();
  }
- public Bolillero(byte cantidad):this()
-        {
-            this.Llenar(cantidad); 
-        }
-
+       public Bolillero(byte cantidad) : this() => this.Llenar(cantidad);
         private void Llenar (byte cantidad)
         {
             for(byte i=0; i < cantidad; i++)
@@ -36,11 +33,11 @@ Random r;
         }
         public byte SacarBolilla()
         {
-           byte indiceAzar = (byte)r.Next(0, Adentro.Count);
+           byte indiceBolilleroAzar = (byte)r.Next(0, Adentro.Count);
 
-            byte bolilla = Adentro [indiceAzar];
+            byte bolilla = Adentro [indiceBolilleroAzar];
 
-            Adentro.RemoveAt(indiceAzar);
+            Adentro.RemoveAt(indiceBolilleroAzar);
 
             Afuera.Add(bolilla);
 
