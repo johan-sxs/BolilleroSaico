@@ -9,22 +9,76 @@ namespace Bolillero.Core
     {
 byte Cantidad {get;set;}
 
-byte Bolillalazar {get;set;}
+byte Azar {get;set;}
 
 List<byte> Afuera {get;set;}
 
 List<byte> Dentro{get;set;}
-Random N;
+Random r;
  
  public Bolillero()
  {
      List<byte> Afuera = new List<byte>();
      List<byte> Dentro = new List<byte>();
-     Random N = new Random();
+     Random r = new Random();
  }
- public Bolillero(byte Cantidad)
- {
-   this.(this.Cantidad);
-    } 
-}
+ public Bolillero(byte cantidad):this()
+        {
+            this.Llenar(cantidad); 
+        }
+
+        private void Llenar (byte cantidad)
+        {
+            for(byte i=0; i < cantidad; i++)
+            {
+                Adentro.Add(i);
+            }
+        }
+        public byte SacarBolilla()
+        {
+           byte indiceAzar = (byte)r.Next(0, Adentro.Count);
+
+            byte bolilla = Adentro [indiceAzar];
+
+            Adentro.RemoveAt(indiceAzar);
+
+            Afuera.Add(bolilla);
+
+            return bolilla;
+        }
+         public void RellenarBolillero()
+        {
+            Adentro.AddRange(Afuera);
+
+            Afuera.Clear();
+        }
+
+        public bool Jugar (List<byte> jugada)
+        {
+            RellenarBolillero(); 
+            for(byte i=0; i < jugada.Count; i++)
+            {
+                if (SacarBolilla() != jugada[i] )
+                {
+                    return false;
+                }
+            }
+                return true; 
+        } 
+
+        public long jugarNVeces (List<byte> jugada, long cantidad )
+        {
+            long contador = 0; 
+
+            for(long i=0; i < cantidad ; i++ )
+            {
+                if (Jugar(jugada))
+                {
+                    contador++ ;
+                }
+            }
+
+            return contador;
+        }
+    }  
 }
