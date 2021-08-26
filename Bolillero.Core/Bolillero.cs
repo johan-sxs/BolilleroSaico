@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
-
 namespace Bolillero.Core
 {
     public class Bolillero
@@ -13,7 +11,7 @@ byte BolilleroAzar {get;set;}
 
 List<byte> Afuera {get;set;}
 
-List<byte> Dentro{get;set;}
+List<byte> Adentro{get;set;}
 
 Random r;
  
