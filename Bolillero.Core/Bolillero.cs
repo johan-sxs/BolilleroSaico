@@ -5,13 +5,13 @@ namespace Bolillero.Core
 {
     public class Bolillero
     {
-byte Cantidad {get;set;}
-
-public int Cantidadafuera=> Afuera.Count;
-public int Cantidadadentro => Adentro.Count;
-List<byte> Afuera {get;set;}
-List<byte> Adentro{get;set;}
-Random r;
+        byte Cantidad {get;set;}
+        public int Cantidadafuera=> Afuera.Count;
+        public int Cantidadadentro => Adentro.Count;
+        List<byte> Afuera {get;set;}
+        List<byte> Adentro{get;set;}
+        Random r;
+        
  public Bolillero()
  {
      List<byte> Afuera = new List<byte>();
