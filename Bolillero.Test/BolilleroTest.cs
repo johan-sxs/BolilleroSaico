@@ -6,20 +6,30 @@ namespace Bolillero.Test
     [TestClass]
     public class BolilleroTest
     {
-        public Bolillero.Core Bolillero {get;get;}
-    
-    [TestMethod]
+        public Bolillero.Core.Bolillero Bolillero { get; set; }
 
-  public void CantidadBolillasAfuera()
- {
-    Bolillero= new Bolillero.Core.Bolillero{10};
+        [TestMethod]
 
-    Bolillero.SacarBolilla();
+        public void CantidadBolillasAfuera()
+        {
+            Bolillero = new Bolillero.Core.Bolillero(10);
 
-    Assert.AreEqual(1, Bolillero.Cantidadafuera)
-    Assert.AreEqual(9, Bolillero.CantidadAdentro)
- }
-       
+            Bolillero.SacarBolilla();
 
-  }
+            Assert.AreEqual(1, Bolillero.Cantidadafuera);
+            Assert.AreEqual(9, Bolillero.Cantidadadentro);
+        }
+        [TestMethod]
+        public void Probabilidad()
+        {
+            Bolillero = new Bolillero.Core.Bolillero(5);
+            var jugadafacil = new List<byte>() { 2 };
+            var ganadas = Bolillero.jugarNVeces(jugadafacil, 100);
+
+            Assert.AreEqual(0.2, ganadas / 100, 0.5);
+
+
+        }
+
+    }
 }

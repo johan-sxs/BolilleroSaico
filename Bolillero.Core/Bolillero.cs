@@ -5,32 +5,32 @@ namespace Bolillero.Core
 {
     public class Bolillero
     {
-        byte Cantidad {get;set;}
-        public int Cantidadafuera=> Afuera.Count;
+        byte Cantidad { get; set; }
+        public int Cantidadafuera => Afuera.Count;
         public int Cantidadadentro => Adentro.Count;
-        List<byte> Afuera {get;set;}
-        List<byte> Adentro{get;set;}
+        List<byte> Afuera { get; set; }
+        List<byte> Adentro { get; set; }
         Random r;
-        
- public Bolillero()
- {
-     List<byte> Afuera = new List<byte>();
-     List<byte> Dentro = new List<byte>();
-     Random r = new Random(DateTime.Now.Millisecond);
- }
-       public Bolillero(byte cantidad) : this() => this.Llenar(cantidad);
-        private void Llenar (byte cantidad)
+
+        public Bolillero()
         {
-            for(byte i=0; i < cantidad; i++)
+            List<byte> Afuera = new List<byte>();
+            List<byte> Dentro = new List<byte>();
+            Random r = new Random(DateTime.Now.Millisecond);
+        }
+        public Bolillero(byte cantidad) : this() => this.Llenar(cantidad);
+        private void Llenar(byte cantidad)
+        {
+            for (byte i = 0; i < cantidad; i++)
             {
                 Adentro.Add(i);
             }
         }
         public byte SacarBolilla()
         {
-           byte indiceAzar = (byte)r.Next(0, Adentro.Count);
+            byte indiceAzar = (byte)r.Next(0, Adentro.Count);
 
-            byte bolilla = Adentro [indiceAzar];
+            byte bolilla = Adentro[indiceAzar];
 
             Adentro.RemoveAt(indiceAzar);
 
@@ -38,39 +38,39 @@ namespace Bolillero.Core
 
             return bolilla;
         }
-         public void RellenarBolillero()
+        public void RellenarBolillero()
         {
             Adentro.AddRange(Afuera);
 
             Afuera.Clear();
         }
 
-        public bool Jugar (List<byte> jugada)
+        public bool Jugar(List<byte> jugada)
         {
-            RellenarBolillero(); 
-            for(byte i=0; i < jugada.Count; i++)
+            RellenarBolillero();
+            for (byte i = 0; i < jugada.Count; i++)
             {
-                if (SacarBolilla() != jugada[i] )
+                if (SacarBolilla() != jugada[i])
                 {
                     return false;
                 }
             }
-                return true; 
-        } 
+            return true;
+        }
 
-        public long jugarNVeces (List<byte> jugada, long cantidad )
+        public long jugarNVeces(List<byte> jugada, long cantidad)
         {
-            long contador = 0; 
+            long contador = 0;
 
-            for(long i=0; i < cantidad ; i++ )
+            for (long i = 0; i < cantidad; i++)
             {
                 if (Jugar(jugada))
                 {
-                    contador++ ;
+                    contador++;
                 }
             }
 
             return contador;
         }
-    }  
+    }
 }
