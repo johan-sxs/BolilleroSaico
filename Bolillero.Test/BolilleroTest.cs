@@ -1,5 +1,6 @@
 ﻿using Bolillero.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace Bolillero.Test
 {
@@ -23,7 +24,7 @@ namespace Bolillero.Test
         public void Probabilidad()
         {
             Bolillero = new Bolillero.Core.Bolillero(5);
-            var jugadafacil = new List<byte>() { 2 };
+            var jugadafacil = new List<byte>(){2};
             var ganadas = Bolillero.jugarNVeces(jugadafacil, 100);
 
             Assert.AreEqual(0.2, ganadas / 100, 0.5);
