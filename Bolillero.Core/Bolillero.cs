@@ -14,8 +14,8 @@ namespace Bolillero.Core
 
         public Bolillero()
         {
-            List<byte> Afuera = new List<byte>();
-            List<byte> Dentro = new List<byte>();
+            Afuera = new List<byte>();
+            Adentro = new List<byte>();
             r = new Random(DateTime.Now.Millisecond);
         }
         public Bolillero(byte cantidad) : this() => this.Llenar(cantidad);
