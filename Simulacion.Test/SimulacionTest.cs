@@ -18,11 +18,11 @@ namespace Simulacion.Test
 
             var jugada  = new List<byte>{5};
 
-            long cantidadVeces = 1000000;
+            long cantidadVeces = 6000000;
             double esperado = cantidadVeces/10;
             var ganadasSinHilos = Simulacion.simularSinHilos(bolillero, cantidadVeces, jugada);
 
-            var ganadasConHilos = Simulacion.simularConHilos(bolillero, cantidadVeces, jugada, 4);
+            var ganadasConHilos = Simulacion.simularConHilos(bolillero, cantidadVeces, jugada, 6);
 
             Assert.AreEqual(ganadasConHilos/esperado, ganadasSinHilos/esperado, 0.1);
             
