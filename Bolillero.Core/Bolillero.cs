@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bolillero.Core
 {
-    public class Bolillero
+    public class Bolillero : ICloneable
     {
         byte Cantidad { get; set; }
         public int Cantidadafuera => Afuera.Count;
@@ -12,13 +12,23 @@ namespace Bolillero.Core
         List<byte> Adentro { get; set; }
         Random r;
 
-        public Bolillero()
+          public Bolillero()
         {
-            Afuera = new List<byte>();
-            Adentro = new List<byte>();
+            Afuera = new List<byte>{};
+            Adentro = new List<byte>{};
             r = new Random(DateTime.Now.Millisecond);
         }
-        public Bolillero(byte cantidad) : this() => this.Llenar(cantidad);
+
+        public Bolillero(byte cantidad):this()
+        {
+            this.Llenar(cantidad); 
+        }
+        privado Bolillero(Bolillero originil)
+        {
+            Afuera = new List<byte>(originil);
+            Adentro = new List<byte>(originil);
+            r = new Random(DateTime.Now.Millisecond);
+        }
         private void Llenar(byte cantidad)
         {
             for (byte i = 0; i < cantidad; i++)
@@ -71,6 +81,10 @@ namespace Bolillero.Core
             }
 
             return contador;
+        }
+        public object Clone()
+        {
+          return new Bolillero(this);
         }
     }
 }
