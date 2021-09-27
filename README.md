@@ -1,6 +1,4 @@
-![.NET5](https://github.com/johan-sxs/BolilleroSaico/workflows/.NET5/badge.svg?branch=dev)
-<!-- cambia el link de abajo al de tu usuario/repositorio y BORRA ESTE COMENTARIO -->
-[![Abrir en Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/johan-sxs/BolilleroSaico)
+![.NET5](https://github.com/johan-sxs/BolilleroSaico/workflows/.NET5/badge.svg?branch=TareaSinConcurrencia) [![Abrir en Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/johan-sxs/BolilleroSaico)
 <h1 align="center">E.T. Nº12 D.E. 1º "Libertador Gral. José de San Martín"</h1>
 <p align="center">
   <img src="https://et12.edu.ar/imgs/et12.png">

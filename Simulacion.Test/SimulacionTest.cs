@@ -2,7 +2,7 @@ using Bolillero.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-namespace Simulacion.Test
+namespace SimulacionTest
 {
     [TestClass]
     public class SimulacionTest

@@ -7,7 +7,7 @@ namespace Bolillero.Core
 {
     public class Simulacion
     {
-          public long simularSinHilos(Bolillero bolillero, long jugarNVeces, List<byte> jugada)
+        public long simularSinHilos(Bolillero bolillero, long jugarNVeces, List<byte> jugada)
         {
             return bolillero.jugarNVeces(jugada, jugarNVeces);
         }

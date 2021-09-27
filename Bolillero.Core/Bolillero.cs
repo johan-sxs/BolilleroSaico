@@ -23,13 +23,13 @@ namespace Bolillero.Core
         {
             this.Llenar(cantidad); 
         }
-        privado Bolillero(Bolillero originil)
+        private Bolillero(Bolillero original)
         {
-            Afuera = new List<byte>(originil);
-            Adentro = new List<byte>(originil);
+            Afuera = new List<byte>(original.Afuera);
+            Adentro = new List<byte>(original.Adentro);
             r = new Random(DateTime.Now.Millisecond);
         }
-        private void Llenar(byte cantidad)
+        public void Llenar(byte cantidad)
         {
             for (byte i = 0; i < cantidad; i++)
             {
@@ -84,7 +84,7 @@ namespace Bolillero.Core
         }
         public object Clone()
         {
-          return new Bolillero(this);
+return new Bolillero(this);
         }
     }
 }

@@ -2,9 +2,9 @@ name: .NET5
 
 on:
   push:
-    branches: [ main, dev ]
+    branches: [ main, dev , TareaSinConcurrencia]
   pull_request:
-    branches: [ main, dev ]
+    branches: [ main, dev , TareaSinConcurrencia ]
 
 jobs:
   build:
